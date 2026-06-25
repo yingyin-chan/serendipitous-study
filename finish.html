@@ -2,6 +2,14 @@
 
 <html>
 
+<head>
+
+<meta charset="utf-8">
+
+<title>Thank You</title>
+
+</head>
+
 <body>
 
 <h2>Thank You!</h2>
@@ -14,9 +22,19 @@ You have completed the exploration task.
 
 <p>
 
-Please return to the survey.
+Participant ID: <span id="pid"></span>
 
 </p>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const pid = params.get("pid");
+
+document.getElementById("pid").innerText = pid;
+
+</script>
 
 </body>
 
