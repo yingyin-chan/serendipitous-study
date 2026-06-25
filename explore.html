@@ -1,11 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Explore Chengdu</title>
+
+</head>
+
+<body>
+
+<h2>Discover Chengdu</h2>
+
+<div id="content"></div>
+
+<br>
+<br>
+
+<button onclick="finishStudy()">
+
+Finish
+
+</button>
+
 <script>
 
 const params = new URLSearchParams(window.location.search);
 
 const pid = params.get("pid");
+
 const condition = params.get("condition");
 
 console.log("PID:", pid);
+
 console.log("Condition:", condition);
 
 const content = document.getElementById("content");
@@ -16,11 +45,11 @@ content.innerHTML = `
 
 <h3>Food Experiences</h3>
 
-<p>Hotpot Experience</p>
+<p>🍲 Hotpot Experience</p>
 
-<p>Tea House Experience</p>
+<p>🍵 Tea House Experience</p>
 
-<p>Snack Street</p>
+<p>🥟 Snack Street</p>
 
 `;
 
@@ -30,22 +59,33 @@ content.innerHTML = `
 
 <h3>Food Experiences</h3>
 
-<p>Hotpot Experience</p>
+<p>🍲 Hotpot Experience</p>
 
-<p>Snack Street</p>
+<p>🥟 Snack Street</p>
 
 <hr>
 
 <h3>You May Also Like</h3>
 
-<p>Panda Volunteer Program</p>
+<p>🐼 Panda Volunteer Program</p>
 
-<p>Wildlife Conservation Workshop</p>
+<p>🌿 Wildlife Conservation Workshop</p>
 
-<p>Nature Photography Experience</p>
+<p>📷 Nature Photography Experience</p>
 
 `;
 
 }
 
+function finishStudy(){
+
+window.location.href =
+"finish.html" + window.location.search;
+
+}
+
 </script>
+
+</body>
+
+</html>
