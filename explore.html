@@ -1,26 +1,38 @@
-<!DOCTYPE html>
+<script>
 
-<html>
+const params = new URLSearchParams(window.location.search);
 
-<head>
+const pid = params.get("pid");
+const condition = params.get("condition");
 
-<meta charset="utf-8">
+console.log("PID:", pid);
+console.log("Condition:", condition);
 
-<title>Explore Chengdu</title>
+const content = document.getElementById("content");
 
-</head>
+if(condition === "A"){
 
-<body>
+content.innerHTML = `
 
-<h2>Discover Chengdu</h2>
+<h3>Food Experiences</h3>
+
+<p>Hotpot Experience</p>
+
+<p>Tea House Experience</p>
+
+<p>Snack Street</p>
+
+`;
+
+}else{
+
+content.innerHTML = `
 
 <h3>Food Experiences</h3>
 
 <p>Hotpot Experience</p>
 
 <p>Snack Street</p>
-
-<p>Tea House Experience</p>
 
 <hr>
 
@@ -32,25 +44,8 @@
 
 <p>Nature Photography Experience</p>
 
-<br>
-
-<button onclick="finishStudy()">
-
-Finish
-
-</button>
-
-<script>
-
-function finishStudy(){
-
-window.location.href =
-"finish.html";
+`;
 
 }
 
 </script>
-
-</body>
-
-</html>
